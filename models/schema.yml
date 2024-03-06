@@ -50,7 +50,97 @@ sources:
           - name: logcost
             description: the expense incurred in the process of transporting goods
           - name: ship_cost
-            description: the cost of shipping the order
+            description: the cost of shipping the order     
 
 
-            
+      - name: raw_gz_adwords
+        identifier: raw_gz_adwords
+        description: adwords
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||  campaign_key)"
+        columns:
+          - name: date_date
+            description: the date of the campaign 
+          - name: paid_source
+            description: paid source
+          - name: campaign_key
+            description: campaign_key
+          - name: camPGN_name
+            description: camPGN_name  
+          - name: ads_cost
+            description: ads_cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click  
+
+
+      - name: raw_gz_bing
+        identifier: raw_gz_bing
+        description: bing
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||  campaign_key)"
+        columns:
+          - name: date_date
+            description: the date of the campaign 
+          - name: paid_source
+            description: paid source
+          - name: campaign_key
+            description: campaign_key
+          - name: camPGN_name
+            description: camPGN_name  
+          - name: ads_cost
+            description: ads_cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click  
+
+
+
+      - name: raw_gz_criteo
+        identifier: raw_gz_criteo
+        description: criteo
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||  campaign_key)"
+        columns:
+          - name: date_date
+            description: the date of the campaign 
+          - name: paid_source
+            description: paid source
+          - name: campaign_key
+            description: campaign_key
+          - name: camPGN_name
+            description: camPGN_name  
+          - name: ads_cost
+            description: ads_cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click  
+
+
+      - name: raw_gz_facebook
+        identifier: raw_gz_facebook
+        description: facebook
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||  campaign_key)"
+        columns:
+          - name: date_date
+            description: the date of the campaign 
+          - name: paid_source
+            description: paid source
+          - name: campaign_key
+            description: campaign_key
+          - name: camPGN_name
+            description: camPGN_name  
+          - name: ads_cost
+            description: ads_cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click  
