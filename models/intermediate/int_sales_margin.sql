@@ -4,9 +4,9 @@ SELECT
     orders_id,
     revenue, 
     quantity, 
-    CAST(purchase_price AS FLOAT64) AS purchase_price, 
-    ROUND(s.quantity*CAST(p.purchase_price AS FLOAT64),2) AS purchase_cost,
-    ROUND(s.revenue - ROUND(s.quantity*CAST(p.purchase_price AS FLOAT64),2), 2) AS margin
+    CAST(purchse_price AS FLOAT64) AS purchse_price, 
+    ROUND(s.quantity*CAST(p.purchse_price AS FLOAT64),2) AS purchase_cost,
+    ROUND(s.revenue - ROUND(s.quantity*CAST(p.purchse_price AS FLOAT64),2), 2) AS margin
 FROM {{ ref('stg_gz_raw_data__raw_gz_sales') }} s
 LEFT JOIN {{ ref('stg_gz_raw_data__raw_gz_product') }} p 
     USING (products_id)
